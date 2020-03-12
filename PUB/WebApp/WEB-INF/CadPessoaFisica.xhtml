@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+</h:head>
+<h:body>
+<h2>Pessoa Fisica</h2>
+	<h:form>
+		<h:panelGrid>
+			<h:outputLabel value="Nome :" />
+			<h:inputText value="#{pessoaFisicaBean.pessoa.nome}" required="true" />
+
+			<h:outputLabel value="CPF :" />
+			<h:inputText value="#{pessoaFisicaBean.pessoa.CPF}" required="true" />
+
+			<h:outputLabel value="RG :" />
+			<h:inputText value="#{pessoaFisicaBean.pessoa.RG}" required="true" />
+
+			<h:outputLabel value="Telefone :" />
+			<h:inputText value="#{pessoaFisicaBean.pessoa.telefone}"
+				required="true" />
+
+			<h:outputLabel value="Endereço :" />
+			<h:inputText value="#{pessoaFisicaBean.pessoa.endereco}"
+				required="true" />
+
+			<h:commandButton action="#{pessoaFisicaBean.addPessoaFisica}"
+				value="Salvar" />
+			<h:messages showDetail="true" showSummary="false" />
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>

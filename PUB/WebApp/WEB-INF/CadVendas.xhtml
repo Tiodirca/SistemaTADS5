@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+</h:head>
+<h:body>
+<h2>Usuario</h2>
+	<h:form>
+		<h:panelGrid>
+		
+			<h:outputLabel value="Nome:" />
+			<h:inputText value="#{VendasBean.cliente.nome}" required="true" />
+			
+			<h:outputLabel value="Telefone:" />
+			<h:inputText value="#{VendasBean.cliente.telefone}" required="true" />
+			
+			<h:outputLabel value="Endereço:" />
+			<h:inputText value="#{VendasBean.cliente.endereco}" required="true" />
+			
+			<h:outputLabel value="Numero da mesa:" />
+			<h:inputText value="#{VendasBean.mesa.numero}" required="true" />
+			
+			<h:outputLabel value="Total Vendas:" />
+			<h:inputText value="#{VendasBean.vendas.totalVendas}" required="true" />
+
+			<h:commandButton action="#{VendasBean.addVendas()}"
+				value="Salvar" />
+			<h:messages showDetail="true" showSummary="false" />
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>
