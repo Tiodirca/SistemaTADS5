@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head></h:head> 
+<body> 
+
+<p:dataTable var="pessoaFisica" value="#{pessoaFisicaBean.listarPessoaFisica()}">
+    <p:column headerText="Id">
+        <h:outputText value="#{pessoaFisica.id}" />
+    </p:column>
+ 
+    <p:column headerText="Nome:">
+        <h:outputText value="#{pessoaFisica.nome}" />
+    </p:column>
+ 
+    <p:column headerText="CPF">
+        <h:outputText value="#{pessoaFisica.CPF}" />
+    </p:column>
+ 
+    <p:column headerText="RG">
+        <h:outputText value="#{pessoaFisica.RG}" />
+    </p:column>
+    <p:column headerText="Telefone">
+        <h:outputText value="#{pessoaFisica.telefone}" />
+    </p:column>
+    <p:column headerText="Endereço">
+        <h:outputText value="#{pessoaFisica.endereco}" />
+    </p:column>
+
+</p:dataTable>
+
+</body> 
+</html>
+

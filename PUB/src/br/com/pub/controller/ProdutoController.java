@@ -34,7 +34,7 @@ public class ProdutoController implements Serializable{
 		
 		FacesContext.getCurrentInstance().getExternalContext().getFlash().setKeepMessages(true);
 		limparDados();
-		return "listProdutos";
+		return "ListProdutos";
 		
 	}
 	public List<Produto> listarProdutos(){

@@ -2,35 +2,33 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	 xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 </h:head>
 <h:body>
 <h2>Pessoa Fisica</h2>
 	<h:form>
-		<h:panelGrid>
-			<h:outputLabel value="Nome :" />
-			<h:inputText value="#{pessoaFisicaBean.pessoa.nome}" required="true" />
-
-			<h:outputLabel value="CPF :" />
-			<h:inputText value="#{pessoaFisicaBean.pessoa.CPF}" required="true" />
-
-			<h:outputLabel value="RG :" />
-			<h:inputText value="#{pessoaFisicaBean.pessoa.RG}" required="true" />
-
-			<h:outputLabel value="Telefone :" />
-			<h:inputText value="#{pessoaFisicaBean.pessoa.telefone}"
-				required="true" />
-
-			<h:outputLabel value="Endereço :" />
-			<h:inputText value="#{pessoaFisicaBean.pessoa.endereco}"
-				required="true" />
-
-			<h:commandButton action="#{pessoaFisicaBean.addPessoaFisica}"
-				value="Salvar" />
-			<h:messages showDetail="true" showSummary="false" />
-		</h:panelGrid>
+	<h:panelGrid>
+	<p:outputLabel value="Nome: " />
+    <p:inputText id="nome" value="#{pessoaFisicaBean.pessoa.nome}" />
+		
+	<p:outputLabel value="CPF: " />
+    <p:inputText id="cpf" value="#{pessoaFisicaBean.pessoa.CPF}" />
+    
+    <p:outputLabel value="RG : " />
+    <p:inputText id="rg" value="#{pessoaFisicaBean.pessoa.RG}" />
+    
+    <p:outputLabel value="Telefone: " />
+    <p:inputText id="telefone" value="#{pessoaFisicaBean.pessoa.telefone}" />
+    
+    <p:outputLabel value="Endereço: " />
+    <p:inputText id="endereco" value="#{pessoaFisicaBean.pessoa.endereco}" />
+     <p:commandButton value="Cadastrar" id="ajax" action="#{pessoaFisicaBean.addPessoaFisica()}" 
+     style="margin-right:20px;" styleClass="ui-priority-primary" />
+ 
+    </h:panelGrid>
 	</h:form>
 </h:body>
 </html>

@@ -1,6 +1,7 @@
 package br.com.pub.controller;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -32,11 +33,20 @@ public class PessoaFisicaController implements Serializable{
 	}
 	public String addPessoaFisica(){
 		pessoaFDAO.novo(pessoa);
-		FacesContext.getCurrentInstance().addMessage(null,new FacesMessage("Salvo com sucesso"));
+		//FacesContext.getCurrentInstance().addMessage(null,new FacesMessage("Salvo com sucesso"));
 		
-		FacesContext.getCurrentInstance().getExternalContext().getFlash().setKeepMessages(true);
+		//FacesContext.getCurrentInstance().getExternalContext().getFlash().setKeepMessages(true);
 		limparUsuario();
-		return " ";
+		return "ListPessoaFisica";
+	}
+	public List<PessoaFisica> listarPessoaFisica(){
+		//pegar cabeçalho do datatable e colocar.
+		return pessoaFDAO.listarTodos(PessoaFisica.class);
+	}
+	
+	public String delProduto(){
+		pessoaFDAO.deletar(pessoa);
+		return "ListPessoaFisica";
 	}
 	
 }
