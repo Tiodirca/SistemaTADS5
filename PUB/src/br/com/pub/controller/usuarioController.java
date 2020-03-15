@@ -1,11 +1,9 @@
 package br.com.pub.controller;
 
 import java.io.Serializable;
-
-import javax.faces.application.FacesMessage;
+import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.faces.context.FacesContext;
 import br.com.pub.jpaUtil.GenericDAO;
 import br.com.pub.model.Usuario;
 
@@ -30,11 +28,21 @@ public class usuarioController implements Serializable{
 	}
 	public String addUsuario(){
 		usuarioDAO.novo(usuario);
-		FacesContext.getCurrentInstance().addMessage(null,new FacesMessage("Salvo com sucesso"));
-		
-		FacesContext.getCurrentInstance().getExternalContext().getFlash().setKeepMessages(true);
 		limparDados();
-		return " ";
+		return "ListUsuarios";
+	}
+	public List<Usuario> listarUsuario(){
+		return usuarioDAO.listarTodos(Usuario.class);
+	}
+	
+	public String delUsuario(){
+		usuarioDAO.deletar(usuario);
+		return "ListUsuarios";
+		
+	}
+	public String atualizarPessoaJuridica(){
+		usuarioDAO.deletar(usuario);
+		return "";
 	}
 	
 }

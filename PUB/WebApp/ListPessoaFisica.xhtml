@@ -30,9 +30,17 @@
     <p:column headerText="Endereço">
         <h:outputText value="#{pessoaFisica.endereco}" />
     </p:column>
-
+    <p:column headerText="Excluir">
+	 <p:commandLink id="ajax"  action="#{pessoaFisicaBean.delPessoa(pessoaFisica)}" style="margin-right:20px;">
+        <h:outputText value="Excluir" />
+    </p:commandLink>
+      </p:column>
+      <p:column headerText="Editar">
+	 <p:commandLink  action="#{pessoaFisicaBean.atualizarProduto(pessoaFisica)}" style="margin-right:20px;">
+        <h:outputText value="Editar" />
+    </p:commandLink>
+      </p:column>
 </p:dataTable>
-
 </body> 
 </html>
 
