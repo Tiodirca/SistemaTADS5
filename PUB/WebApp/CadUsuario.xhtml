@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 </h:head>
@@ -11,22 +12,22 @@
 	<h:form>
 		<h:panelGrid>
 		
-			<h:outputLabel value="Nome :" />
-			<h:inputText value="#{UsuarioBean.usuario.nome}" required="true" />
+			<p:outputLabel value="Nome :" />
+			<p:inputText value="#{UsuarioBean.usuario.nome}" required="true" />
 			
-			<h:outputLabel value="Login :" />
-			<h:inputText value="#{UsuarioBean.usuario.login}" required="true" />
+			<p:outputLabel value="Login :" />
+			<p:inputText value="#{UsuarioBean.usuario.login}" required="true" />
 
-			<h:outputLabel value="Senha :" />
-			<h:inputText value="#{UsuarioBean.usuario.senha}" required="true" />
+			<p:outputLabel value="Senha :" />
+			<p:inputText value="#{UsuarioBean.usuario.senha}" required="true" />
 
-			<h:outputLabel value="Telefone :" />
-			<h:inputText value="#{UsuarioBean.usuario.telefone}" required="true" />
+			<p:outputLabel value="Telefone :" />
+			<p:inputText value="#{UsuarioBean.usuario.telefone}" required="true" />
 
-			<h:outputLabel value="Endereço :" />
-			<h:inputText value="#{UsuarioBean.usuario.endereco}" required="true" />
+			<p:outputLabel value="Endereço :" />
+			<p:inputText value="#{UsuarioBean.usuario.endereco}" required="true" />
 
-			<h:commandButton action="#{UsuarioBean.addUsuario()}"
+			<p:commandButton action="#{UsuarioBean.addUsuario()}"
 				value="Salvar" />
 			<h:messages showDetail="true" showSummary="false" />
 		</h:panelGrid>

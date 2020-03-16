@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 </h:head>
@@ -11,22 +12,22 @@
 	<h:form>
 		<h:panelGrid>
 		
-			<h:outputLabel value="Nome:" />
-			<h:inputText value="#{VendasBean.cliente.nome}" required="true" />
+			<p:outputLabel value="Nome:" />
+			<p:inputText value="#{VendasBean.cliente.nome}" required="true" />
 			
-			<h:outputLabel value="Telefone:" />
-			<h:inputText value="#{VendasBean.cliente.telefone}" required="true" />
+			<p:outputLabel value="Telefone:" />
+			<p:inputText value="#{VendasBean.cliente.telefone}" required="true" />
 			
-			<h:outputLabel value="Endereço:" />
-			<h:inputText value="#{VendasBean.cliente.endereco}" required="true" />
+			<p:outputLabel value="Endereço:" />
+			<p:inputText value="#{VendasBean.cliente.endereco}" required="true" />
 			
-			<h:outputLabel value="Numero da mesa:" />
-			<h:inputText value="#{VendasBean.mesa.numero}" required="true" />
+			<p:outputLabel value="Numero da mesa:" />
+			<p:inputText value="#{VendasBean.mesa.numero}" required="true" />
 			
-			<h:outputLabel value="Total Vendas:" />
-			<h:inputText value="#{VendasBean.vendas.totalVendas}" required="true" />
+			<p:outputLabel value="Total Vendas:" />
+			<p:inputText value="#{VendasBean.vendas.totalVendas}" required="true" />
 
-			<h:commandButton action="#{VendasBean.addVendas()}"
+			<p:commandButton action="#{VendasBean.addVendas()}"
 				value="Salvar" />
 			<h:messages showDetail="true" showSummary="false" />
 		</h:panelGrid>

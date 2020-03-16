@@ -10,7 +10,7 @@ import br.com.pub.model.Usuario;
 @SuppressWarnings("deprecation")
 @ManagedBean(name ="UsuarioBean")
 @SessionScoped
-public class usuarioController implements Serializable{
+public class UsuarioController implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	Usuario usuario = new Usuario();

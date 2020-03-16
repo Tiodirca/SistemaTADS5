@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 </h:head>
@@ -10,24 +11,23 @@
 <h2>Pessoa Juridica</h2>
 	<h:form>
 		<h:panelGrid>
-			<h:outputLabel value="Nome :" />
-			<h:inputText value="#{pessoaJuridicaBean.pessoaJ.nome}" required="true" />
+			<p:outputLabel value="Nome :" />
+			<p:inputText value="#{pessoaJuridicaBean.pessoaJ.nome}" required="true" />
 
-			<h:outputLabel value="CNPJ :" />
-			<h:inputText value="#{pessoaJuridicaBean.pessoaJ.CNPJ}" required="true" />
+			<p:outputLabel value="CNPJ :" />
+			<p:inputText value="#{pessoaJuridicaBean.pessoaJ.CNPJ}" required="true" />
 
-			<h:outputLabel value="IE :" />
-			<h:inputText value="#{pessoaJuridicaBean.pessoaJ.IE}" required="true" />
+			<p:outputLabel value="IE :" />
+			<p:inputText value="#{pessoaJuridicaBean.pessoaJ.IE}" required="true" />
 
-			<h:outputLabel value="Telefone :" />
-			<h:inputText value="#{pessoaJuridicaBean.pessoaJ.telefone}" required="true" />
+			<p:outputLabel value="Telefone :" />
+			<p:inputText value="#{pessoaJuridicaBean.pessoaJ.telefone}" required="true" />
 
-			<h:outputLabel value="Endereço :" />
-			<h:inputText value="#{pessoaJuridicaBean.pessoaJ.endereco}" required="true" />
+			<p:outputLabel value="Endereço :" />
+			<p:inputText value="#{pessoaJuridicaBean.pessoaJ.endereco}" required="true" />
 
-			<h:commandButton action="#{pessoaJuridicaBean.addPessoaJudica()}"
+			<p:commandButton action="#{pessoaJuridicaBean.addPessoaJudica()}"
 				value="Salvar" />
-			<h:messages showDetail="true" showSummary="false" />
 		</h:panelGrid>
 	</h:form>
 </h:body>
