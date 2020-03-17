@@ -3,10 +3,8 @@ package br.com.pub.controller;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.faces.context.FacesContext;
 import br.com.pub.jpaUtil.GenericDAO;
 import br.com.pub.model.Cliente;
 import br.com.pub.model.ItensVendas;
@@ -24,11 +22,8 @@ public class VendasController implements Serializable{
 	Cliente cliente = new Cliente();
 	Mesa mesa = new Mesa();
 	GenericDAO<Vendas> vendasDAO = new GenericDAO<Vendas>();
-	GenericDAO<Cliente> clienteDAO = new GenericDAO<Cliente>();
-	GenericDAO<Mesa> mesaDAO = new GenericDAO<Mesa>();
 
-	
-	
+
 	public Vendas getVendas() {
 		return vendas;
 	}
@@ -67,14 +62,14 @@ public class VendasController implements Serializable{
 	}
 	
 	public String addVendas(){
+		vendas.setItensVendas(itensVendas);
+		vendas.setMesa(mesa);
+		vendas.setCliente(cliente);
 		vendasDAO.novo(vendas);
-		mesaDAO.novo(mesa);
-		clienteDAO.novo(cliente);
-		FacesContext.getCurrentInstance().addMessage(null,new FacesMessage("Salvo com sucesso"));
 		
-		FacesContext.getCurrentInstance().getExternalContext().getFlash().setKeepMessages(true);
+	
 		limparDados();
-		return " ";
+		return "";
 	}
 	
 }

@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-
 import br.com.pub.jpaUtil.GenericDAO;
 import br.com.pub.model.PessoaFisica;
 
@@ -31,7 +30,6 @@ public class PessoaFisicaController implements Serializable{
 	}
 	public String addPessoaFisica(){
 		pessoaFDAO.novo(pessoa);
-		
 		limparUsuario();
 		return "ListPessoaFisica";
 	}
@@ -39,12 +37,12 @@ public class PessoaFisicaController implements Serializable{
 		return pessoaFDAO.listarTodos(PessoaFisica.class);
 	}
 	
-	public String delPessoa(){
+	public String delPessoa(PessoaFisica pessoa){
 		pessoaFDAO.deletar(pessoa);
 		return "ListPessoaFisica";
 		
 	}
-	public String atualizarPessoaFisica(){
+	public String atualizarPessoaFisica(PessoaFisica pessoa){
 		pessoaFDAO.alterar(pessoa);
 		return "CadPessoaFisica";
 	}
