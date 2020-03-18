@@ -39,12 +39,16 @@ public class PessoaFisicaController implements Serializable{
 	
 	public String delPessoa(PessoaFisica pessoa){
 		pessoaFDAO.deletar(pessoa);
-		return "ListPessoaFisica";
+		return "sucesso";
 		
 	}
 	public String atualizarPessoaFisica(PessoaFisica pessoa){
 		pessoaFDAO.alterar(pessoa);
 		return "CadPessoaFisica";
+	}
+	public String voltarLista(){
+		
+		return "ListPessoaFisica";
 	}
 	
 }

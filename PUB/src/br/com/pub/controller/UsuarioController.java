@@ -35,13 +35,13 @@ public class UsuarioController implements Serializable{
 		return usuarioDAO.listarTodos(Usuario.class);
 	}
 	
-	public String delUsuario(){
+	public String delUsuario(Usuario usuario){
 		usuarioDAO.deletar(usuario);
-		return "ListUsuarios";
+		return "sucesso";
 		
 	}
-	public String atualizarPessoaJuridica(){
-		usuarioDAO.deletar(usuario);
+	public String atualizarUsuario(){
+		usuarioDAO.alterar(usuario);
 		return "";
 	}
 	

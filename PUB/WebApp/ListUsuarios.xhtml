@@ -6,7 +6,8 @@
       xmlns:p="http://primefaces.org/ui"> 
 
 <h:head></h:head> 
-<body> 
+<body>
+<h:form>
 	<p:dataTable var="usuario" value="#{UsuarioBean.listarUsuario()}">
     <p:column headerText="Id">
         <h:outputText value="#{usuario.id}" />
@@ -30,7 +31,7 @@
         <h:outputText value="#{usuario.endereco}" />
     </p:column>
     <p:column headerText="Excluir">
-	 <p:commandLink id="ajax"  action="#{UsuarioBean.delUsuario(usuario)}" style="margin-right:20px;">
+	 <p:commandLink  action="#{UsuarioBean.delUsuario(usuario)}" style="margin-right:20px;">
         <h:outputText value="Excluir" />
     </p:commandLink>
       </p:column>
@@ -40,5 +41,6 @@
     </p:commandLink>
       </p:column>
 </p:dataTable>
+</h:form>
 </body> 
 </html>

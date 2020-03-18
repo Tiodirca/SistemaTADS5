@@ -8,35 +8,32 @@
 <h:head></h:head> 
 <body>
 <h:form>
-	<p:dataTable var="pessoaJuridica" value="#{pessoaJuridicaBean.listarPessoaJuridica()}">
+	<p:dataTable var="vendas" value="#{VendasBean.listarVendas()}">
     <p:column headerText="Id">
-        <h:outputText value="#{pessoaJuridica.id}" />
+        <h:outputText value="#{vendas.cliente.id}" />
     </p:column>
  
     <p:column headerText="Nome">
-        <h:outputText value="#{pessoaJuridica.nome}" />
+        <h:outputText value="#{vendas.cliente.nome}" />
     </p:column>
  
-    <p:column headerText="CNPJ">
-        <h:outputText value="#{pessoaJuridica.CNPJ}" />
-    </p:column>
- 
-    <p:column headerText="IE">
-        <h:outputText value="#{pessoaJuridica.IE}" />
-    </p:column>
     <p:column headerText="Telefone">
-        <h:outputText value="#{pessoaJuridica.telefone}" />
+        <h:outputText value="#{vendas.cliente.telefone}" />
     </p:column>
+ 
     <p:column headerText="Endereço">
-        <h:outputText value="#{pessoaJuridica.endereco}" />
+        <h:outputText value="#{vendas.cliente.endereco}" />
+    </p:column>
+    <p:column headerText="Numero da mesa">
+        <h:outputText value="#{vendas.mesa.numero}" />
     </p:column>
     <p:column headerText="Excluir">
-	 <p:commandLink action="#{pessoaJuridicaBean.delPessoaJuridica(pessoaJuridica)}" style="margin-right:20px;">
+	 <p:commandLink  action="#{VendasBean.delVendas(vendas)}" style="margin-right:20px;">
         <h:outputText value="Excluir" />
     </p:commandLink>
       </p:column>
       <p:column headerText="Editar">
-	 <p:commandLink  action="#{pessoaJuridicaBean.atualizarPessoaJuridica(pessoaJuridica)}" style="margin-right:20px;">
+	 <p:commandLink  action="#{VendasBean.atualizarVendas(vendas)}" style="margin-right:20px;">
         <h:outputText value="Editar" />
     </p:commandLink>
       </p:column>

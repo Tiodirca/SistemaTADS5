@@ -35,9 +35,13 @@ public class ProdutoController implements Serializable{
 		return produtoDAO.listarTodos(Produto.class);
 	}
 	
-	public String delProduto(){
+	public String delProduto(Produto produto){
 		produtoDAO.deletar(produto);
-		return "ListProdutos";
+		return "sucesso";
+	}
+	public String atualizarProduto(){
+		produtoDAO.alterar(produto);
+		return "";
 	}
 	
 }

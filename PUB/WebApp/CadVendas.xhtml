@@ -13,11 +13,19 @@
 		<h:panelGrid>
 		
 			<p:outputLabel value="Nome:" />
-			<p:inputText value="#{VendasBean.vendas.}" required="true" />
+			<p:inputText value="#{VendasBean.cliente.nome}" required="true" />
+			
+			<p:outputLabel value="Telefone:" />
+			<p:inputText value="#{VendasBean.cliente.telefone}" required="true" />
+			
+			<p:outputLabel value="Endereco" />
+			<p:inputText value="#{VendasBean.cliente.endereco}" required="true" />
+			
+			<p:outputLabel value="Numero da mesa:" />
+			<p:inputText value="#{VendasBean.mesa.numero}" required="true" />
 			
 			<p:commandButton action="#{VendasBean.addVendas()}"
 				value="Salvar" />
-			<h:messages showDetail="true" showSummary="false" />
 		</h:panelGrid>
 	</h:form>
 </h:body>

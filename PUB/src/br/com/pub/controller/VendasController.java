@@ -65,11 +65,21 @@ public class VendasController implements Serializable{
 		vendas.setItensVendas(itensVendas);
 		vendas.setMesa(mesa);
 		vendas.setCliente(cliente);
-		vendasDAO.novo(vendas);
-		
-	
+		vendasDAO.novo(vendas);	
 		limparDados();
-		return "";
+		return "ListVendas";
+	}
+	public List<Vendas> listarVendas(){
+		return vendasDAO.listarTodos(Vendas.class);
+	}
+	public String delVendas(Vendas vendas){
+		vendasDAO.deletar(vendas);
+		return "sucesso";
+		
+	}
+	public String atualizarVendas(){
+		vendasDAO.alterar(vendas);
+		return "sucesso";
 	}
 	
 }

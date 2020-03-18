@@ -39,9 +39,9 @@ public class PessoaJuridicaController implements Serializable {
 		return pessoaJDAO.listarTodos(PessoaJuridica.class);
 	}
 	
-	public String delPessoaJuridica(){
+	public String delPessoaJuridica(PessoaJuridica pessoaJ){
 		pessoaJDAO.deletar(pessoaJ);
-		return "ListPessoaJuridica";
+		return "sucesso";
 		
 	}
 	public String atualizarPessoaJuridica(){

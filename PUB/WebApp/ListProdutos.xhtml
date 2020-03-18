@@ -7,7 +7,7 @@
 
 <h:head></h:head> 
 <body> 
-
+<h:form>
 <p:dataTable var="produto" value="#{ProdutoBean.listarProdutos()}">
     <p:column headerText="Id">
         <h:outputText value="#{produto.id}" />
@@ -24,7 +24,17 @@
     <p:column headerText="Estoque Máximo">
         <h:outputText value="#{produto.estoqueMax}" />
     </p:column>
+        <p:column headerText="Excluir">
+	 <p:commandLink  action="#{ProdutoBean.delProduto(produto)}" style="margin-right:20px;">
+        <h:outputText value="Excluir" />
+    </p:commandLink>
+      </p:column>
+      <p:column headerText="Editar">
+	 <p:commandLink  action="#{ProdutoBean.atualizarProduto(produto)}" style="margin-right:20px;">
+        <h:outputText value="Editar" />
+    </p:commandLink>
+      </p:column>
 </p:dataTable>
-
+</h:form>
 </body> 
 </html>

@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 </h:head>
@@ -10,17 +11,17 @@
 <h2>Produto</h2>
 	<h:form>
 		<h:panelGrid>
-			<h:outputLabel value="Descrição :" />
-			<h:inputText value="#{ProdutoBean.produto.descricao}" required="true" />
+			<p:outputLabel value="Descrição :" />
+			<p:inputText value="#{ProdutoBean.produto.descricao}" required="true" />
 
-			<h:outputLabel value="Estoque Máximo :" />
-			<h:inputText value="#{ProdutoBean.produto.estoqueMax}" required="true" />
+			<p:outputLabel value="Estoque Máximo :" />
+			<p:inputText value="#{ProdutoBean.produto.estoqueMax}" required="true" />
 
-			<h:outputLabel value="Estoque Mínimo :" />
-			<h:inputText value="#{ProdutoBean.produto.estoqueMin}" required="true" />
+			<p:outputLabel value="Estoque Mínimo :" />
+			<p:inputText value="#{ProdutoBean.produto.estoqueMin}" required="true" />
 
-			<h:outputLabel value="Valor :" />
-			<h:inputText value="#{ProdutoBean.produto.valor}" required="true" />
+			<p:outputLabel value="Valor :" />
+			<p:inputText value="#{ProdutoBean.produto.valor}" required="true" />
 
 			<h:commandButton action="#{ProdutoBean.addProduto()}"
 				value="Salvar" />
