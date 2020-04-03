@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -26,9 +25,6 @@ public class Vendas {
 
 	private double totalVendas;
 
-	@ManyToOne
-	@Cascade({ CascadeType.PERSIST,CascadeType.REMOVE})
-	private Mesa mesa;
 
 	@OneToOne
 	@Cascade({ CascadeType.PERSIST,CascadeType.REMOVE,CascadeType.MERGE})
@@ -68,13 +64,7 @@ public class Vendas {
 		return cliente;
 	}
 
-	public Mesa getMesa() {
-		return mesa;
-	}
 
-	public void setMesa(Mesa mesa) {
-		this.mesa = mesa;
-	}
 
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;

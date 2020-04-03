@@ -29,6 +29,8 @@
     </p:column>
     <p:column headerText="Endereço">
         <h:outputText value="#{pessoaJuridica.endereco}" />
+    </p:column><p:column headerText="Data">
+        <h:outputText value="#{pessoaJuridica.dataNasc}" />
     </p:column>
     <p:column headerText="Excluir">
 	 <p:commandLink action="#{pessoaJuridicaBean.delPessoaJuridica(pessoaJuridica)}" style="margin-right:20px;">

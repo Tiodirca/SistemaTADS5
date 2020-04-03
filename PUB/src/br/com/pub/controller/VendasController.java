@@ -63,7 +63,6 @@ public class VendasController implements Serializable{
 	
 	public String addVendas(){
 		vendas.setItensVendas(itensVendas);
-		vendas.setMesa(mesa);
 		vendas.setCliente(cliente);
 		vendasDAO.novo(vendas);	
 		limparDados();

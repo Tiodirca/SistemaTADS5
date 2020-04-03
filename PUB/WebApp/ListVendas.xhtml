@@ -24,9 +24,6 @@
     <p:column headerText="Endereço">
         <h:outputText value="#{vendas.cliente.endereco}" />
     </p:column>
-    <p:column headerText="Numero da mesa">
-        <h:outputText value="#{vendas.mesa.numero}" />
-    </p:column>
     <p:column headerText="Excluir">
 	 <p:commandLink  action="#{VendasBean.delVendas(vendas)}" style="margin-right:20px;">
         <h:outputText value="Excluir" />
