@@ -12,13 +12,9 @@ import br.com.pub.model.Usuario;
 @ManagedBean(name ="LoginBean")
 @SessionScoped
 public class LoginController implements Serializable{
-
 	private static final long serialVersionUID = 1L;
-
 	Usuario user = new Usuario();
 	GenericDAO<Usuario> userDAO = new GenericDAO<>();
-	
-	
 	public String fazerLogin(String login,String senha){
 		return senha;
 	}
