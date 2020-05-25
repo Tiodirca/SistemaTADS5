@@ -25,7 +25,9 @@
     
     <p:outputLabel value="Endereço: " />
     <p:inputText id="endereco" value="#{pessoaFisicaBean.pessoa.endereco}" />
-     <p:commandButton value="Cadastrar" id="ajax" action="#{pessoaFisicaBean.addPessoaFisica()}" 
+     <p:commandButton value="Cadastrar" id="cad" action="#{pessoaFisicaBean.addPessoaFisica()}" 
+     style="margin-right:20px;" styleClass="ui-priority-primary" />
+      <p:commandButton value="Ver Lista" id="lista" action="#{TrocaPagina.listarPessoaFisica()}" 
      style="margin-right:20px;" styleClass="ui-priority-primary" />
  
     </h:panelGrid>
